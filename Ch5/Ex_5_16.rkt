@@ -323,7 +323,7 @@
     (apply-cont cont
       (any->expval (op (expval->any v1) (expval->any v2))))))
 
-; unop : UnaryOperator * Cont -> Cont
+; unop-cont : UnaryOperator * Cont -> Cont
 (define (unop-cont op cont)
   (lambda (v)
     (apply-cont cont (any->expval (op (expval->any v))))))
